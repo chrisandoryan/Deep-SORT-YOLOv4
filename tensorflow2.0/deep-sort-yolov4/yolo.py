@@ -20,7 +20,7 @@ class YOLO(object):
     def __init__(self):
         self.model_path = 'model_data/yolo4.h5'
         self.anchors_path = 'model_data/yolo_anchors.txt'
-        self.classes_path = 'model_data/coco_classes.txt'
+        self.classes_path = 'model_data/obj_classes.txt'
         self.gpu_num = 1
         self.score = 0.5
         self.iou = 0.5

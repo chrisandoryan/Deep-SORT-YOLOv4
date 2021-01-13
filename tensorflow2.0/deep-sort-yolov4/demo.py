@@ -29,7 +29,7 @@ def main(yolo):
     nms_max_overlap = 1.0
     
     # Deep SORT
-    model_filename = 'model_data/mars-small128.pb'
+    model_filename = 'model_data/camstroke_model.pb'
     encoder = gdet.create_box_encoder(model_filename, batch_size=1)
     
     metric = nn_matching.NearestNeighborDistanceMetric("cosine", max_cosine_distance, nn_budget)
@@ -39,7 +39,7 @@ def main(yolo):
     writeVideo_flag = True
     asyncVideo_flag = False
 
-    file_path = 'video.webm'
+    file_path = 'video.mp4'
     if asyncVideo_flag :
         video_capture = VideoCaptureAsync(file_path)
     else:
